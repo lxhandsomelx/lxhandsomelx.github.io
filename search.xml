@@ -35,14 +35,35 @@
   <entry>
     <title>servlet学习1</title>
     <url>/2020/06/24/servlet/</url>
-    <content><![CDATA[<h1 id="第二篇博客文章"><a href="#第二篇博客文章" class="headerlink" title="第二篇博客文章"></a>第二篇博客文章</h1><p>&emsp;&emsp;学习servlet</p>
-<h3 id="1-用eclipse创建web项目"><a href="#1-用eclipse创建web项目" class="headerlink" title="1.用eclipse创建web项目"></a>1.用eclipse创建web项目</h3><h3 id="2-在java-Resources下新建servlet包"><a href="#2-在java-Resources下新建servlet包" class="headerlink" title="2.在java Resources下新建servlet包"></a>2.在java Resources下新建servlet包</h3><h3 id="3-创建servlet类实现servlet接口"><a href="#3-创建servlet类实现servlet接口" class="headerlink" title="3.创建servlet类实现servlet接口"></a>3.创建servlet类实现servlet接口</h3><ul>
+    <content><![CDATA[<h1 id="servlet入门"><a href="#servlet入门" class="headerlink" title="servlet入门"></a>servlet入门</h1><p>&emsp;&emsp;学习servlet</p>
+<h2 id="1-用eclipse创建web项目"><a href="#1-用eclipse创建web项目" class="headerlink" title="1.用eclipse创建web项目"></a>1.用eclipse创建web项目</h2><h2 id="2-在java-Resources下新建servlet包"><a href="#2-在java-Resources下新建servlet包" class="headerlink" title="2.在java Resources下新建servlet包"></a>2.在java Resources下新建servlet包</h2><h2 id="3-创建class实现servlet接口（直接创建servlet类）"><a href="#3-创建class实现servlet接口（直接创建servlet类）" class="headerlink" title="3.创建class实现servlet接口（直接创建servlet类）"></a>3.创建class实现servlet接口（直接创建servlet类）</h2><ul>
 <li>实现service类</li>
 </ul>
-<h3 id="4-在web-xml进行servlet配置"><a href="#4-在web-xml进行servlet配置" class="headerlink" title="4.在web.xml进行servlet配置"></a>4.在web.xml进行servlet配置</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;servlet&gt;</span><br><span class="line">	&lt;servlet-name&gt;firsttest&lt;&#x2F;servlet-name&gt;</span><br><span class="line">	&lt;servlet-class&gt;testserver.firsttest&lt;&#x2F;servlet-class&gt;</span><br><span class="line">&lt;&#x2F;servlet&gt;</span><br><span class="line">&lt;servlet-mapping&gt;</span><br><span class="line">	&lt;servlet-name&gt;firsttest&lt;&#x2F;servlet-name&gt;</span><br><span class="line">	&lt;url-pattern&gt;&#x2F;ad&lt;&#x2F;url-pattern&gt;</span><br><span class="line">&lt;&#x2F;servlet-mapping&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="4-在web-xml进行servlet配置（ide自动生成）"><a href="#4-在web-xml进行servlet配置（ide自动生成）" class="headerlink" title="4.在web.xml进行servlet配置（ide自动生成）"></a>4.在web.xml进行servlet配置（ide自动生成）</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;servlet&gt;</span><br><span class="line">	&lt;servlet-name&gt;firsttest&lt;&#x2F;servlet-name&gt;</span><br><span class="line">	&lt;servlet-class&gt;testserver.firsttest&lt;&#x2F;servlet-class&gt;</span><br><span class="line">&lt;&#x2F;servlet&gt;</span><br><span class="line">&lt;servlet-mapping&gt;</span><br><span class="line">	&lt;servlet-name&gt;firsttest&lt;&#x2F;servlet-name&gt;</span><br><span class="line">	&lt;url-pattern&gt;&#x2F;ad&lt;&#x2F;url-pattern&gt;</span><br><span class="line">&lt;&#x2F;servlet-mapping&gt;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>在浏览器中访问<a href="http://localhost:8080/项目名称/ad" target="_blank" rel="noopener">http://localhost:8080/项目名称/ad</a>即可访问servlet</li>
 </ul>
+<h2 id="美图"><a href="#美图" class="headerlink" title="美图"></a>美图</h2><p><img src="/2020/06/24/servlet/1.jpg" alt="1"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>servlet学习2</title>
+    <url>/2020/06/27/servlet1/</url>
+    <content><![CDATA[<h1 id="servlet配置详解"><a href="#servlet配置详解" class="headerlink" title="servlet配置详解"></a>servlet配置详解</h1><p>&emsp; &emsp; 学习servlet详细配置</p>
+<h2 id="1-servlet及servlet-mapping基本配置"><a href="#1-servlet及servlet-mapping基本配置" class="headerlink" title="1. servlet及servlet-mapping基本配置"></a>1. servlet及servlet-mapping基本配置</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;servlet&gt;</span><br><span class="line">  &lt;servlet-name&gt;firsttest&lt;&#x2F;servlet-name&gt;</span><br><span class="line">  &lt;servlet-class&gt;testserver.firsttest&lt;&#x2F;servlet-class&gt;</span><br><span class="line">&lt;&#x2F;servlet&gt;</span><br><span class="line">  &lt;servlet-mapping&gt;</span><br><span class="line">  &lt;servlet-name&gt;firsttest&lt;&#x2F;servlet-name&gt;</span><br><span class="line">  &lt;url-pattern&gt;&#x2F;ad&lt;&#x2F;url-pattern&gt;</span><br><span class="line">&lt;&#x2F;servlet-mapping&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>其中servlet及servlet-mapping的servlet-name要一致</li>
+<li>servlet-class为完整类名</li>
+<li>url-pattern为访问路径例如：localhost：8080/项目名/ad(url-pattern)</li>
+</ul>
+<h2 id="2-url-pattern细节配置"><a href="#2-url-pattern细节配置" class="headerlink" title="2. url-pattern细节配置"></a>2. url-pattern细节配置</h2><p><img src="/2020/06/27/servlet1/1.jpg" alt="1"></p>
+<h2 id="3-servlet服务器启动实例化配置与缺省配置"><a href="#3-servlet服务器启动实例化配置与缺省配置" class="headerlink" title="3. servlet服务器启动实例化配置与缺省配置"></a>3. servlet服务器启动实例化配置与缺省配置</h2><p><img src="/2020/06/27/servlet1/2.jpg" alt="2"></p>
+<ul>
+<li>其中servlet缺省配置会影响静态资源匹配，因为服务器进行资源访问是经过默认缺省servlet类进行查找的</li>
+</ul>
+<h2 id="4-导航页面配置"><a href="#4-导航页面配置" class="headerlink" title="4. 导航页面配置"></a>4. 导航页面配置</h2><p><img src="/2020/06/27/servlet1/3.jpg" alt="3"></p>
+<h2 id="美图"><a href="#美图" class="headerlink" title="美图"></a>美图</h2><p><img src="/2020/06/27/servlet1/4.jpg" alt="4"></p>
 ]]></content>
   </entry>
 </search>
