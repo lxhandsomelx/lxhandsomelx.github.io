@@ -28,7 +28,7 @@
 <h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 
 <h3 id="hexo相关命令"><a href="#hexo相关命令" class="headerlink" title="hexo相关命令"></a>hexo相关命令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line">&#x2F;&#x2F;缩写</span><br><span class="line">hexo n &#x3D;&#x3D; hexo new</span><br><span class="line">hexo g &#x3D;&#x3D; hexo generate</span><br><span class="line">hexo s &#x3D;&#x3D; hexo server</span><br><span class="line">hexo d &#x3D;&#x3D; hexo deploy</span><br><span class="line">&#x2F;&#x2F;组合命令</span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
-
+<hr>
 <h2 id="美图"><a href="#美图" class="headerlink" title="美图"></a>美图</h2><p><img src="/2020/05/28/hello-world/aaa.jpg" alt="niceimg"></p>
 ]]></content>
   </entry>
@@ -43,6 +43,7 @@
 <ul>
 <li>在浏览器中访问<a href="http://localhost:8080/项目名称/ad" target="_blank" rel="noopener">http://localhost:8080/项目名称/ad</a>即可访问servlet</li>
 </ul>
+<hr>
 <h2 id="美图"><a href="#美图" class="headerlink" title="美图"></a>美图</h2><p><img src="/2020/06/24/servlet/1.jpg" alt="1"></p>
 ]]></content>
   </entry>
@@ -63,7 +64,30 @@
 <li>其中servlet缺省配置会影响静态资源匹配，因为服务器进行资源访问是经过默认缺省servlet类进行查找的</li>
 </ul>
 <h2 id="4-导航页面配置"><a href="#4-导航页面配置" class="headerlink" title="4. 导航页面配置"></a>4. 导航页面配置</h2><p><img src="/2020/06/27/servlet1/3.jpg" alt="3"></p>
+<hr>
 <h2 id="美图"><a href="#美图" class="headerlink" title="美图"></a>美图</h2><p><img src="/2020/06/27/servlet1/4.jpg" alt="4"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>servlet学习3</title>
+    <url>/2020/06/28/servlet2/</url>
+    <content><![CDATA[<h1 id="servletContext学习"><a href="#servletContext学习" class="headerlink" title="servletContext学习"></a>servletContext学习</h1><h2 id="1-servlet对象基础知识"><a href="#1-servlet对象基础知识" class="headerlink" title="1.servlet对象基础知识"></a>1.servlet对象基础知识</h2><p><strong>什么是ServletContext对象</strong><br>    ServletContext代表一个web应用环境（上下文）对象，ServletContext对象内部封装是该web应用的信息，ServletContext对象一个web应用只有一个</p>
+<pre><code>但是一个web应用可以有多个servlet对象</code></pre><h2 id="2-servlet生命周期及对象获取"><a href="#2-servlet生命周期及对象获取" class="headerlink" title="2.servlet生命周期及对象获取"></a>2.servlet生命周期及对象获取</h2><p><strong>ServletContext对象的生命周期</strong><br>创建：该web应用被加载（服务器启动或发布web应用（前提，服务器为启动状态））<br>销毁：web应用被卸载（服务器关闭，移除该web应用）<br><strong>怎样获得ServletContext对象</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获得ServletContext对象</span></span><br><span class="line">ServletContext context = <span class="keyword">this</span>.getServletContext();</span><br><span class="line"><span class="comment">//或者通过ServletConfig获取</span></span><br><span class="line">ServletContext context = config.getServletContext();</span><br></pre></td></tr></table></figure>
+<h2 id="3-servlet获取web应用全局的初始化参数"><a href="#3-servlet获取web应用全局的初始化参数" class="headerlink" title="3.servlet获取web应用全局的初始化参数"></a>3.servlet获取web应用全局的初始化参数</h2><p><strong>web.xml中配置初始化参数</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 配置全局的初始化参数 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">param-name</span>&gt;</span>driver<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">param-value</span>&gt;</span>org.mariadb.jdbc.Driver<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>通过servletContext对象获取参数</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">ServletContext context = <span class="keyword">this</span>.getServletContext();</span><br><span class="line"><span class="comment">//获取初始化参数</span></span><br><span class="line">String initparameter = context.getInitParameter(<span class="string">"driver"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="4-获取web应用中任何资源的绝对路径（important）"><a href="#4-获取web应用中任何资源的绝对路径（important）" class="headerlink" title="4.获取web应用中任何资源的绝对路径（important）"></a>4.获取web应用中任何资源的绝对路径（important）</h2><p>方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String path = context.getRealPath(相对于该web应用的相对地址);</span><br></pre></td></tr></table></figure>
+<h2 id="5-servletContext是一个域对象（important）"><a href="#5-servletContext是一个域对象（important）" class="headerlink" title="5.servletContext是一个域对象（important）"></a>5.servletContext是一个域对象（important）</h2><ul>
+<li>什么是域对象？什么是域？<br>存储数据的区域就是域对象</li>
+</ul>
+<p>servletContext域对象的作用范围：整个web应用（所有的web资源都可以随意向servletContext域中存储数据，数据可以共享）</p>
+<p>域对象的通用方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">setAttribute(String name,Object obj);</span><br><span class="line">getAttribute(String name);</span><br><span class="line">removeAttribute(String name);</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="美图"><a href="#美图" class="headerlink" title="美图"></a>美图</h2><p><img src="/2020/06/28/servlet2/1.jpg" alt="1"></p>
 ]]></content>
   </entry>
 </search>
