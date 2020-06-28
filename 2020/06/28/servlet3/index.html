@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="httpServletResponse学习1.response运行流程 2.response设置http响应http响应 设置http响应行中的状态码1response.setStatus(302);&#x2F;&#x2F;302表示重定向 通过response设置响应头12345678910&#x2F;&#x2F;add表示添加，set表示设置addHeader(String name,String value);addIntHead">
+<meta name="description" content="httpServletResponse学习1.response运行流程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="servlet学习4">
 <meta property="og:url" content="http://lxhandsomelx.github.io.git/2020/06/28/servlet3/index.html">
 <meta property="og:site_name" content="lxhandsomelx的博客">
-<meta property="og:description" content="httpServletResponse学习1.response运行流程 2.response设置http响应http响应 设置http响应行中的状态码1response.setStatus(302);&#x2F;&#x2F;302表示重定向 通过response设置响应头12345678910&#x2F;&#x2F;add表示添加，set表示设置addHeader(String name,String value);addIntHead">
+<meta property="og:description" content="httpServletResponse学习1.response运行流程">
 <meta property="og:image" content="http://lxhandsomelx.github.io.git/2020/06/28/servlet3/1.jpg">
 <meta property="og:image" content="http://lxhandsomelx.github.io.git/2020/06/28/servlet3/2.jpg">
 <meta property="og:image" content="http://lxhandsomelx.github.io.git/2020/06/28/servlet3/3.jpg">
 <meta property="article:published_time" content="2020-06-28T08:54:34.000Z">
-<meta property="article:modified_time" content="2020-06-28T13:08:05.651Z">
+<meta property="article:modified_time" content="2020-06-28T13:37:15.592Z">
 <meta property="article:author" content="lxhandsomelx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://lxhandsomelx.github.io.git/2020/06/28/servlet3/1.jpg">
@@ -388,6 +388,8 @@
 
       
         <h1 id="httpServletResponse学习"><a href="#httpServletResponse学习" class="headerlink" title="httpServletResponse学习"></a>httpServletResponse学习</h1><h2 id="1-response运行流程"><a href="#1-response运行流程" class="headerlink" title="1.response运行流程"></a>1.response运行流程</h2><p><img src="/2020/06/28/servlet3/1.jpg" alt="1"></p>
+<a id="more"></a>
+
 <h2 id="2-response设置http响应"><a href="#2-response设置http响应" class="headerlink" title="2.response设置http响应"></a>2.response设置http响应</h2><p><strong>http响应</strong><br><img src="/2020/06/28/servlet3/2.jpg" alt="1"></p>
 <h3 id="设置http响应行中的状态码"><a href="#设置http响应行中的状态码" class="headerlink" title="设置http响应行中的状态码"></a>设置http响应行中的状态码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.setStatus(<span class="number">302</span>);<span class="comment">//302表示重定向</span></span><br></pre></td></tr></table></figure>
 <h3 id="通过response设置响应头"><a href="#通过response设置响应头" class="headerlink" title="通过response设置响应头"></a>通过response设置响应头</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//add表示添加，set表示设置</span></span><br><span class="line">addHeader(String name,String value);</span><br><span class="line">addIntHeader(String name,<span class="keyword">int</span> value);</span><br><span class="line">addDateHeader(String name,<span class="keyword">long</span> date);</span><br><span class="line">setHeader(String name,String value);<span class="comment">//重要</span></span><br><span class="line">setDateHeader(String name,<span class="keyword">long</span> date);</span><br><span class="line">addIntHeader(String name,<span class="keyword">int</span> value);</span><br><span class="line">response.response.sendRedirect(<span class="string">""</span>);<span class="comment">//重定向</span></span><br><span class="line"><span class="comment">//其中响应头Location，url为跳转</span></span><br><span class="line"><span class="comment">//refresh,秒数;url="url".表示定时刷新</span></span><br></pre></td></tr></table></figure>
