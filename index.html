@@ -282,7 +282,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/06/28/servlet3/">
+    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2021/01/05/python1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxhandsomelx">
@@ -301,7 +301,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/28/servlet3/" itemprop="url">servlet学习4</a></h1>
+                <a class="post-title-link" href="/2021/01/05/python1/" itemprop="url">python1</a></h1>
         
 
         <div class="post-meta">
@@ -313,8 +313,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-28T16:54:34+08:00">
-                2020-06-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-05T10:41:43+08:00">
+                2021-01-05
               </time>
             
 
@@ -323,6 +323,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index">
+                    <span itemprop="name">python基础</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -345,7 +367,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2k
+                  1.1k
                 </span>
               
 
@@ -361,7 +383,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  11
+                  4
                 </span>
               
             </div>
@@ -383,10 +405,365 @@
 
       
         
-          <h1 id="httpServletResponse学习"><a href="#httpServletResponse学习" class="headerlink" title="httpServletResponse学习"></a>httpServletResponse学习</h1><h2 id="1-response运行流程"><a href="#1-response运行流程" class="headerlink" title="1.response运行流程"></a>1.response运行流程</h2><p><img src="/2020/06/28/servlet3/1.jpg" alt="1"></p>
+          
+            <h1 id="Python基础"><a href="#Python基础" class="headerlink" title="Python基础"></a>Python基础</h1><h2 id="一-number类型"><a href="#一-number类型" class="headerlink" title="一. number类型"></a>一. number类型</h2><h3 id="1-“-”和“-”运算符"><a href="#1-“-”和“-”运算符" class="headerlink" title="1. “//”和“**”运算符"></a>1. “//”和“**”运算符</h3><p><strong>注意：</strong>在不同的机器上浮点运算的结果可能会不一样。</p>
+<p>在整数除法中，除法 <strong>/</strong> 总是返回一个浮点数，如果只想得到整数的结果，丢弃可能的分数部分，可以使用运算符 <strong>//</strong> ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 17 &#x2F; 3  # 整数除法返回浮点型</span><br><span class="line">5.666666666666667</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&gt;&gt;&gt; 17 &#x2F;&#x2F; 3  # 整数除法返回向下取整后的结果</span><br><span class="line">5</span><br><span class="line">&gt;&gt;&gt; 17 % 3  # ％操作符返回除法的余数</span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt; 5 * 3 + 2 </span><br><span class="line">17</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：**</strong>//** 得到的并不一定是整数类型的数，它与分母分子的数据类型有关系。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; 7&#x2F;&#x2F;2</span><br><span class="line">3</span><br><span class="line">&gt;&gt;&gt; 7.0&#x2F;&#x2F;2</span><br><span class="line">3.0</span><br><span class="line">&gt;&gt;&gt; 7&#x2F;&#x2F;2.0</span><br><span class="line">3.0</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="2-数学函数"><a href="#2-数学函数" class="headerlink" title="2. 数学函数"></a>2. 数学函数</h2><table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">返回值 ( 描述 )</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-abs.html" target="_blank" rel="noopener">abs(x)</a></td>
+<td align="left">返回数字的绝对值，如abs(-10) 返回 10</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-ceil.html" target="_blank" rel="noopener">ceil(x)</a></td>
+<td align="left">返回数字的上入整数，如math.ceil(4.1) 返回 5</td>
+</tr>
+<tr>
+<td align="left">cmp(x, y)</td>
+<td align="left">如果 x &lt; y 返回 -1, 如果 x == y 返回 0, 如果 x &gt; y 返回 1。 <strong>Python 3 已废弃，使用 (x&gt;y)-(x&lt;y) 替换</strong>。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-exp.html" target="_blank" rel="noopener">exp(x)</a></td>
+<td align="left">返回e的x次幂(ex),如math.exp(1) 返回2.718281828459045</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-fabs.html" target="_blank" rel="noopener">fabs(x)</a></td>
+<td align="left">返回数字的绝对值，如math.fabs(-10) 返回10.0</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-floor.html" target="_blank" rel="noopener">floor(x)</a></td>
+<td align="left">返回数字的下舍整数，如math.floor(4.9)返回 4</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-log.html" target="_blank" rel="noopener">log(x)</a></td>
+<td align="left">如math.log(math.e)返回1.0,math.log(100,10)返回2.0</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-log10.html" target="_blank" rel="noopener">log10(x)</a></td>
+<td align="left">返回以10为基数的x的对数，如math.log10(100)返回 2.0</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-max.html" target="_blank" rel="noopener">max(x1, x2,…)</a></td>
+<td align="left">返回给定参数的最大值，参数可以为序列。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-min.html" target="_blank" rel="noopener">min(x1, x2,…)</a></td>
+<td align="left">返回给定参数的最小值，参数可以为序列。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-modf.html" target="_blank" rel="noopener">modf(x)</a></td>
+<td align="left">返回x的整数部分与小数部分，两部分的数值符号与x相同，整数部分以浮点型表示。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-pow.html" target="_blank" rel="noopener">pow(x, y)</a></td>
+<td align="left">x**y 运算后的值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-round.html" target="_blank" rel="noopener">round(x [,n])</a></td>
+<td align="left">返回浮点数 x 的四舍五入值，如给出 n 值，则代表舍入到小数点后的位数。<strong>其实准确的说是保留值将保留到离上一位更近的一端。</strong></td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-sqrt.html" target="_blank" rel="noopener">sqrt(x)</a></td>
+<td align="left">返回数字x的平方根。</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="3-随机数函数"><a href="#3-随机数函数" class="headerlink" title="3. 随机数函数"></a>3. 随机数函数</h2><p>随机数可以用于数学，游戏，安全等领域中，还经常被嵌入到算法中，用以提高算法效率，并提高程序的安全性。</p>
+<p>Python包含以下常用随机数函数：</p>
+<table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-choice.html" target="_blank" rel="noopener">choice(seq)</a></td>
+<td align="left">从序列的元素中随机挑选一个元素，比如random.choice(range(10))，从0到9中随机挑选一个整数。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-randrange.html" target="_blank" rel="noopener">randrange ([start,] stop [,step])</a></td>
+<td align="left">从指定范围内，按指定基数递增的集合中获取一个随机数，基数默认值为 1</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-random.html" target="_blank" rel="noopener">random()</a></td>
+<td align="left">随机生成下一个实数，它在[0,1)范围内。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-seed.html" target="_blank" rel="noopener">seed([x])</a></td>
+<td align="left">改变随机数生成器的种子seed。如果你不了解其原理，你不必特别去设定seed，Python会帮你选择seed。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-shuffle.html" target="_blank" rel="noopener">shuffle(lst)</a></td>
+<td align="left">将序列的所有元素随机排序</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-uniform.html" target="_blank" rel="noopener">uniform(x, y)</a></td>
+<td align="left">随机生成下一个实数，它在[x,y]范围内。</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="4-三角函数"><a href="#4-三角函数" class="headerlink" title="4. 三角函数"></a>4. 三角函数</h2><p>Python包括以下三角函数：</p>
+<table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-acos.html" target="_blank" rel="noopener">acos(x)</a></td>
+<td align="left">返回x的反余弦弧度值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-asin.html" target="_blank" rel="noopener">asin(x)</a></td>
+<td align="left">返回x的反正弦弧度值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-atan.html" target="_blank" rel="noopener">atan(x)</a></td>
+<td align="left">返回x的反正切弧度值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-atan2.html" target="_blank" rel="noopener">atan2(y, x)</a></td>
+<td align="left">返回给定的 X 及 Y 坐标值的反正切值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-cos.html" target="_blank" rel="noopener">cos(x)</a></td>
+<td align="left">返回x的弧度的余弦值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-hypot.html" target="_blank" rel="noopener">hypot(x, y)</a></td>
+<td align="left">返回欧几里德范数 sqrt(x<em>x + y</em>y)。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-sin.html" target="_blank" rel="noopener">sin(x)</a></td>
+<td align="left">返回的x弧度的正弦值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-tan.html" target="_blank" rel="noopener">tan(x)</a></td>
+<td align="left">返回x弧度的正切值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-degrees.html" target="_blank" rel="noopener">degrees(x)</a></td>
+<td align="left">将弧度转换为角度,如degrees(math.pi/2) ， 返回90.0</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.runoob.com/python3/python3-func-number-radians.html" target="_blank" rel="noopener">radians(x)</a></td>
+<td align="left">将角度转换为弧度</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="5-数学常量"><a href="#5-数学常量" class="headerlink" title="5. 数学常量"></a>5. 数学常量</h2><table>
+<thead>
+<tr>
+<th align="left">常量</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">pi</td>
+<td align="left">数学常量 pi（圆周率，一般以π来表示）</td>
+</tr>
+<tr>
+<td align="left">e</td>
+<td align="left">数学常量 e，e即自然常数（自然常数）。</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="二-字符串"><a href="#二-字符串" class="headerlink" title="二. 字符串"></a>二. 字符串</h2><h2 id="Python-访问字符串中的值"><a href="#Python-访问字符串中的值" class="headerlink" title="Python 访问字符串中的值"></a>Python 访问字符串中的值</h2><p>Python 不支持单字符类型，单字符在 Python 中也是作为一个字符串使用。</p>
+<p>Python 访问子字符串，可以使用方括号 <strong>[]</strong> 来截取字符串，字符串的截取的语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量[头下标:尾下标]</span><br></pre></td></tr></table></figure>
+
+<p>索引值以 <strong>0</strong> 为开始值，<strong>-1</strong> 为从末尾的开始位置。</p>
+<p><img src="/2021/01/05/python1/1.jpg" alt="1"></p>
+<p><img src="/2021/01/05/python1/2.png" alt="2"></p>
+<hr>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/07/18/js-bootstrap2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxhandsomelx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lxhandsomelx的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/18/js-bootstrap2/" itemprop="url">js-bootstrap2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-18T11:40:34+08:00">
+                2020-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js-bootstrap-js%E6%8F%92%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">js_bootstrap_js插件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  16.6k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  93
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/06/28/servlet3/#more" rel="contents">
+            <a class="btn" href="/2020/07/18/js-bootstrap2/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -437,7 +814,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/06/28/servlet2/">
+    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/07/18/js-bootstrap1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxhandsomelx">
@@ -456,7 +833,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/28/servlet2/" itemprop="url">servlet学习3</a></h1>
+                <a class="post-title-link" href="/2020/07/18/js-bootstrap1/" itemprop="url">js-bootstrap1</a></h1>
         
 
         <div class="post-meta">
@@ -468,8 +845,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-28T12:53:52+08:00">
-                2020-06-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-18T11:40:28+08:00">
+                2020-07-18
               </time>
             
 
@@ -478,6 +855,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js-bootstrap-%E7%BB%84%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">js_bootstrap_组件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -500,7 +899,361 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  376
+                  19.8k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  102
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Glyphicons-字体图标"><a href="#Glyphicons-字体图标" class="headerlink" title="Glyphicons 字体图标"></a>Glyphicons 字体图标</h1>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/18/js-bootstrap1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/07/18/js-bootstrap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxhandsomelx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lxhandsomelx的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/18/js-bootstrap/" itemprop="url">js_bootstrap_css</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-18T11:34:56+08:00">
+                2020-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js-bootstrap-css/" itemprop="url" rel="index">
+                    <span itemprop="name">js_bootstrap_css</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  24.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  120
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="css"><a href="#css" class="headerlink" title="css"></a>css</h1>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/18/js-bootstrap/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/07/18/linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxhandsomelx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lxhandsomelx的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/18/linux/" itemprop="url">linux命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-18T11:03:44+08:00">
+                2020-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux%E5%91%BD%E4%BB%A4/" itemprop="url" rel="index">
+                    <span itemprop="name">linux命令</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  408
                 </span>
               
 
@@ -538,11 +1291,10 @@
 
       
         
-          <h1 id="servletContext学习"><a href="#servletContext学习" class="headerlink" title="servletContext学习"></a>servletContext学习</h1><h2 id="1-servlet对象基础知识"><a href="#1-servlet对象基础知识" class="headerlink" title="1.servlet对象基础知识"></a>1.servlet对象基础知识</h2><p><strong>什么是ServletContext对象</strong><br>    ServletContext代表一个web应用环境（上下文）对象，ServletContext对象内部封装是该web应用的信息，ServletContext对象一个web应用只有一个</p>
-<pre><code>但是一个web应用可以有多个servlet对象</code></pre>
+          <h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/06/28/servlet2/#more" rel="contents">
+            <a class="btn" href="/2020/07/18/linux/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -593,7 +1345,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/06/27/servlet1/">
+    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/07/04/JSTL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxhandsomelx">
@@ -612,7 +1364,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/27/servlet1/" itemprop="url">servlet学习2</a></h1>
+                <a class="post-title-link" href="/2020/07/04/JSTL/" itemprop="url">JSTL</a></h1>
         
 
         <div class="post-meta">
@@ -624,8 +1376,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-27T17:07:24+08:00">
-                2020-06-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-04T11:33:30+08:00">
+                2020-07-04
               </time>
             
 
@@ -634,6 +1386,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JSTL/" itemprop="url" rel="index">
+                    <span itemprop="name">JSTL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -656,7 +1430,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  189
+                  355
                 </span>
               
 
@@ -694,11 +1468,10 @@
 
       
         
-          <h1 id="servlet配置详解"><a href="#servlet配置详解" class="headerlink" title="servlet配置详解"></a>servlet配置详解</h1><p>&emsp; &emsp; 学习servlet详细配置</p>
-<h2 id="1-servlet及servlet-mapping基本配置"><a href="#1-servlet及servlet-mapping基本配置" class="headerlink" title="1. servlet及servlet-mapping基本配置"></a>1. servlet及servlet-mapping基本配置</h2>
+          <h1 id="JSTL：-Core标签库学习-前缀c"><a href="#JSTL：-Core标签库学习-前缀c" class="headerlink" title="JSTL： Core标签库学习(前缀c:)"></a>JSTL： Core标签库学习(前缀c:)</h1>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/06/27/servlet1/#more" rel="contents">
+            <a class="btn" href="/2020/07/04/JSTL/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -749,7 +1522,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/06/24/servlet/">
+    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/07/04/el/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxhandsomelx">
@@ -768,7 +1541,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/06/24/servlet/" itemprop="url">servlet学习1</a></h1>
+                <a class="post-title-link" href="/2020/07/04/el/" itemprop="url">el表达式</a></h1>
         
 
         <div class="post-meta">
@@ -780,8 +1553,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-24T15:02:27+08:00">
-                2020-06-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-04T10:59:28+08:00">
+                2020-07-04
               </time>
             
 
@@ -790,6 +1563,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/el%E8%A1%A8%E8%BE%BE%E5%BC%8F/" itemprop="url" rel="index">
+                    <span itemprop="name">el表达式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -812,7 +1607,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  133
+                  114
                 </span>
               
 
@@ -850,11 +1645,13 @@
 
       
         
-          <h1 id="servlet入门"><a href="#servlet入门" class="headerlink" title="servlet入门"></a>servlet入门</h1><p>&emsp;&emsp;学习servlet</p>
-<h2 id="1-用eclipse创建web项目"><a href="#1-用eclipse创建web项目" class="headerlink" title="1.用eclipse创建web项目"></a>1.用eclipse创建web项目</h2>
+          <h1 id="el表达式"><a href="#el表达式" class="headerlink" title="el表达式"></a>el表达式</h1><ul>
+<li>嵌入在jsp页面中，减少jsp脚本编写</li>
+</ul>
+<h2 id="el表达式的作用"><a href="#el表达式的作用" class="headerlink" title="el表达式的作用"></a>el表达式的作用</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/06/24/servlet/#more" rel="contents">
+            <a class="btn" href="/2020/07/04/el/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -905,7 +1702,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/05/28/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/07/03/mybatis1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lxhandsomelx">
@@ -924,7 +1721,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/05/28/hello-world/" itemprop="url">hexo博客搭建</a></h1>
+                <a class="post-title-link" href="/2020/07/03/mybatis1/" itemprop="url">mybatis1</a></h1>
         
 
         <div class="post-meta">
@@ -936,8 +1733,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-28T12:13:10+08:00">
-                2020-05-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-03T14:15:35+08:00">
+                2020-07-03
               </time>
             
 
@@ -968,7 +1765,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  558
+                  4
                 </span>
               
 
@@ -984,7 +1781,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -1006,12 +1803,594 @@
 
       
         
-          <p>Welcome to my Blog</p>
-<h1 id="第一篇博客文章"><a href="#第一篇博客文章" class="headerlink" title="第一篇博客文章"></a>第一篇博客文章</h1><p>&emsp; &emsp; 学习windows环境下hexo博客的搭建</p>
-<h2 id="1-软件安装"><a href="#1-软件安装" class="headerlink" title="1. 软件安装"></a>1. 软件安装</h2><h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3>
+          
+            <h1 id="mybatis学习"><a href="#mybatis学习" class="headerlink" title="mybatis学习"></a>mybatis学习</h1><h2 id="SqlMapConfig-xml"><a href="#SqlMapConfig-xml" class="headerlink" title="SqlMapConfig.xml"></a>SqlMapConfig.xml</h2><p>* </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/07/03/mysql1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxhandsomelx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lxhandsomelx的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/03/mysql1/" itemprop="url">mysql1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-03T11:04:55+08:00">
+                2020-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h1><ul>
+<li><p>隐式内连接</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- select s.*,e.score,e.courseID FROM student s,score e WHERE s.sid=e.sid;</span></span><br><span class="line"><span class="comment">-- SELECT s.`name`,c.className FROM student s JOIN classes c on c.classID=s.classID;</span></span><br><span class="line"><span class="keyword">SELECT</span> s.*,s1.score,s1.courseID, (<span class="keyword">SELECT</span> c.courseName <span class="keyword">FROM</span> course c <span class="keyword">WHERE</span> courseID=s1.courseID) <span class="keyword">AS</span> <span class="string">"课程名"</span> <span class="keyword">FROM</span> student s <span class="keyword">JOIN</span> score s1 <span class="keyword">oN</span> s1.score <span class="keyword">WHERE</span> s1.score&gt;<span class="number">98</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+</ul>
+<h1 id="MySQL数据库的常用操作"><a href="#MySQL数据库的常用操作" class="headerlink" title="MySQL数据库的常用操作"></a>MySQL数据库的常用操作</h1><p>一 、MySQL字段类型</p>
+<p>　　常用的有：数值(int, float)、字符串(varchar, text)、日期(date, datetime)</p>
+<p>二、MySQL约束</p>
+<p>　　主键：primary key</p>
+<p>　　外键：foreign key</p>
+<p>　　默认值：default</p>
+<p>　　唯一：unique</p>
+<p>　　非空：not null</p>
+<p>三、物理删除和逻辑删除</p>
+<p>　　在使用数据库的时候，一定会遇到删除数据库中的内容，这个时候一定要小心操作，不然就会被老板直接开除，网络上不是有个很火的命令操作叫”程序员如何执行一条命令让老板开除”，所以操作数据库时一定要小心谨慎。</p>
+<p>　　说一下什么是物理删除和逻辑删除，物理删除就是把一条数据从数据库中永远删除，就是再也找不到也不能恢复；逻辑删除就是给你设计的表再增加一列(比如：isDelete，设默认值为0)，当你想删除数据时将这个字段的值设为1，当你再操作数据时把isDelete值为1的筛选掉就可以了，这样数据也不会丢失。对于重要的数据一定要设置这个字段，对于不重要的数据自己想怎么操作就怎么操作，大不了全部删除再重新建数据库。</p>
+<p>四、数据库基本操作(增删改查)</p>
+<p>　　1、创建数据库</p>
+<p>　　　　create database [if not exists] db_name [character set utf8]；</p>
+<p>　　　　注意：[if not exists]：最好加上，这样可以避免麻烦，每操作一次数据库就多一次风险</p>
+<p>　　　　　　  [character set utf8]就是设置编码格式，也可以不指定</p>
+<p>　　2、查看数据</p>
+<p>　　　　show databases;</p>
+<p>　　3、查看数据库创建方式</p>
+<p>　　　　show create database db_name;</p>
+<p>　　4、修改数据库</p>
+<p>　　　　alter database db_name [character set xxx];</p>
+<p>　　5、删除数据库</p>
+<p>　　　　drop database [if exists] db_name;</p>
+<p>　　　　注意： [if exists]：如果你不确定数据库是否存在最好加上，存在就删除，不存在也不会报错</p>
+<p>　　6、使用数据库</p>
+<p>　　　　use db_name;</p>
+<p>　　7、查看当前使用数据库</p>
+<p>　　　　select database();</p>
+<p>五、数据库管理</p>
+<p>　　1、通过grant命令，给test数据库，添加用户***，密码123456</p>
+<p>　　　　grant select,insert,update,delete,create,drop on test to ‘***’@’localhost’ identified by ‘123456’;</p>
+<p>　　2、修改用户密码</p>
+<p>　　　　grant select,insert,update,delete,create,drop on test to ‘***’@’localhost’ identified by ‘asdfasdf’;</p>
+<p>　　3、显示用户</p>
+<p>　　　　select user from mysql.user;</p>
+<p>　　4、删除用户</p>
+<p>　　　　drop user ‘***’@’localhost’;</p>
+<p>六、数据表的基本操作(增删改查)</p>
+<p>　　1、查看数据表</p>
+<p>　　　　show tables;</p>
+<p>　　2、创建数据表</p>
+<p>　　　　create table student(</p>
+<p>　　　　　　id int primary key auto_increment,</p>
+<p>　　　　　　name varchar(20) not null,</p>
+<p>　　　　　　age int not null,</p>
+<p>　　　　　　gender tinyint(1) default 1,</p>
+<p>　　　　　　 birthday date,</p>
+<p>　　　　　　hobby varchar(20)</p>
+<p>　　　　　);</p>
+<p>　　3、查看数据表结构</p>
+<p>　　　　desc student;</p>
+<p>　　4、查看创建数据表语句</p>
+<p>　　　　show create table student;</p>
+<p>　　5、增加数据(列，字段)</p>
+<p>　　　　alter table student add address varchar(30);</p>
+<p>　　6、增加多个数据</p>
+<p>　　　　alter table student add address varchar(30),</p>
+<p>　　　　　　　　　　　　 add age int not null,</p>
+<p>　　　　　　　　　　　　 add height int not null;</p>
+<p>　　7、修改一列列名</p>
+<p>　　　　alter table student change address addr varchar(20);</p>
+<p>　　8、修改一列类型</p>
+<p>　　　　alter table student modify age tinyint default 20;</p>
+<p>　　9、删除一列</p>
+<p>　　　　alter table student drop height;</p>
+<p>　　10、修改表名</p>
+<p>　　　　rename table student to stu;</p>
+<p>　　11、修改表所用的字符集</p>
+<p>　　　　alter table student character set utf8;</p>
+<p>　　12、删除表</p>
+<p>　　　　drop table student;</p>
+<hr>
+<p>　　create table users(id int not null,</p>
+<p>　　　　　　　　　　 name varchar(10),</p>
+<p>　　　　　　　　　　 age int,</p>
+<p>　　　　　　　　　　  height int</p>
+<p>　　);</p>
+<p>　　13、添加主键</p>
+<p>　　　　alter table users add primary key (id);</p>
+<p>　　14、删除主键</p>
+<p>　　　　alter table users drop primary key;</p>
+<p>　　15、添加唯一索引</p>
+<p>　　　　alter table users add unique (name);</p>
+<p>　　16、添加唯一索引设置索引名</p>
+<p>　　　　alter table users add unique key user_name(name);</p>
+<p>　　17、添加联合索引</p>
+<p>　　　　alter table users add unique index name_age(name,age);</p>
+<p>　　18、删除索引</p>
+<p>　　　　alter table users drop index name;</p>
+<hr>
+<p> 　create table student( id int primary key auto_increment,</p>
+<p>　　　　　　　　　　　 name varchar(20),</p>
+<p>　　　　　　　　　　　 birthday varchar(20),</p>
+<p>　　　　　　　　　　　 age int</p>
+<p>　　);</p>
+<p>　　19、插入一条数据</p>
+<p>　　　　insert into student(name,birthday,age) values(‘学生1’,’2001-1-1’,11);</p>
+<p>　　20、插入多条数据</p>
+<p>　　　　insert into student(name,birthday,age) values(‘学生2’,’2001-1-2’,11),</p>
+<p>　　　　　　　　　　　　　　　　　　　　　　　　(‘学生3’,’2001-1-3’,11),</p>
+<p>　　　　　　　　　　　　　　　　　　　　　　　　(‘学生4’,’2001-1-4’,11);</p>
+<p>　　21、修改数据</p>
+<p>　　　　update student set birthday=’2001-1-10’ where id=1;</p>
+<p>　　22、数据表中的数据可以直接运算</p>
+<p>　　　　update student set age = age + 5;</p>
+<p>　　23、删除数据</p>
+<p>　　　　delete from student where id = 1;</p>
+<p>　　　　注意：删除数据时一定要加条件限制，不然整张数据表都被删除了</p>
+<p>　　24、删除表中的所有数据</p>
+<p>　　　　delete from student;</p>
+<p>七、查询数据</p>
+<p>　　create table grade( id int primary key auto_increment,</p>
+<p>　　　　　　　　　　  name varchar(20),</p>
+<p>　　　　　　　　　　　js double,</p>
+<p>　　　　　　　　　　　java double,</p>
+<p>　　　　　　　　　　　python double );</p>
+<p>　　insert into grade (name,js,java,python) values (‘Tom’,68,89,87),(‘Jim’,70,91,92),(‘Jake’,71,73,74),(‘Mike’,80,84,85),(‘Jame’,85,88,83);</p>
+<p>　　1、select查询</p>
+<p>　　　　查询所有数据： select * from grade;</p>
+<p>　　　　查询姓名和js成绩： select name,js from grade;</p>
+<p>　　　　过滤表中重复数据： select distinct js from grade;</p>
+<p>　　　　给所有js成绩+5，并使用as别名： select name,js+5 as ‘js成绩’ from grade;</p>
+<p>　　2、where过滤查询</p>
+<p>　　　　查询姓名XX的学生信息： select * from grade where name=’Tom’;</p>
+<p>　　　　查询总分大于250分的所有学生： select name,js+java+python as ‘总成绩’ from grade where js+java+python&gt;250;</p>
+<p>　　　　查询js分数和java分数大于90的学生： select * from grade where js&gt;90 and java&gt;90;</p>
+<p>　　　　查询java分数80~90的学生： select * from grade where java between 80 and 90;</p>
+<p>　　　　查询java分数在80或90的学生： select * from grade where java in (80,90);</p>
+<p>　　　　/* 模糊查询，%表示多个字符，_表示一个字符 */</p>
+<p>　　　　查询姓名j开头的学生： select * from grade where name like ‘j%’;</p>
+<p>八、order by 排序</p>
+<p>　　/* asc:升序，默认值 desc：降序 */</p>
+<p>　　根据js分数升序排序： select * from grade order by js;</p>
+<p>　　更加总分数从高到低排序：select name,(ifnull(js,0)+ifnull(java,0)+ifnull(python,0)) as ‘总分数’ from grade order by ‘总分数’ desc;</p>
+<p>九、group by分组查询</p>
+<p>　　create table product_tab( id int primary key auto_increment,</p>
+<p>　　　　　　　　　　　　　 product_name varchar(20),</p>
+<p>　　　　　　　　　　　　　 price float(6,2),</p>
+<p>　　　　　　　　　　　　　 product_date date,</p>
+<p>　　　　　　　　　　　　　 class varchar(20) );</p>
+<p>　　insert into product_tab (product_name,price,product_date,class) values (‘苹果’,10,’20180812’,’水果’),</p>
+<p>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　(‘香蕉’,20,’20180826’,’水果’),</p>
+<p>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　(“水壶”,120,’20170612’,”电器”),</p>
+<p>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　(“被罩”,70,’20170612’,”家具”),</p>
+<p>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　(“音响”,420,’20171012’,”电器”),</p>
+<p>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　(“电视”,2000,’20170912’,”电器”),</p>
+<p>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　(“床单”,55,’20171112’,”家具”),</p>
+<p>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　(“草莓”,34,’20170512’,”水果”);</p>
+<p>　　按位置分组： select * from product_tab group by 5;</p>
+<p>　　按产品类别分类并显示平均价格： select class,avg(price) from product_tab group by class;</p>
+<p>　　按产品分类显示每一种商品价格总和超过200的商品： select class,sum(price) from product_tab group by class having sum(price)&gt;200;</p>
+<p>　　分组显示所有产品：group_concat select id,group_concat(product_name) from product_tab group by class;</p>
+<p>十、where和having之间的区别</p>
+<p>　　首先，明确一点就是能使用where的地方都能使用having；where只能用于分组之前数据的筛选；having只能用于分组之后数据的筛选，</p>
+<p>而且having中可以使用聚合函数。</p>
+<p>十一、聚合函数</p>
+<p>　　COUNT（列名）：统计行的个数</p>
+<p>　　　　统计学生个数： select count(id) from grade;</p>
+<p>　　SUM（列名）：统计总量</p>
+<p>　　　　统计所有js总成绩： select sum(js) as ‘js总成绩’ from grade;</p>
+<p>　　AVG（列名）：平均数</p>
+<p>　　　　 统计所有js平均分： select avg(js) as ‘js平均分’ from grade;</p>
+<p>　　MAX,MIN （最高，最低）</p>
+<p>　　　　select max(js) as ‘js最高分’ from grade;</p>
+<p>　　　　select min(js) as ‘js最低分’ from grade;</p>
+<p>十二、SQL语句执行顺序</p>
+<p>　　from—-where—-select—-group by—-having—-order by</p>
+<p>十三、limit和正则表达式</p>
+<p>　　limit</p>
+<p>　　　　查询前3条数据： select * from grade limit 3;</p>
+<p>　　　　跳过1条，查询3条数据： select * from grade limit 1,3;</p>
+<p>　　正则表达式</p>
+<p>　　　　查询j开头的学生： select * from grade where name regexp ‘^j’;</p>
+<p>　　　　查询名字中m出现2次的学生： select * from grade where name regexp ‘m{2}’;</p>
+<p>十四、多表操作</p>
+<p>　　1、外键约束</p>
+<p>　　　　/* 一个班级对应多个学生，一个学生只能对应一个班级 */</p>
+<p>　　　　主表：创建班级表 create table class( id int primary key auto_increment, name varchar(20), stu_nums int );</p>
+<p>　　　　子表：创建学生表 create table student( id int primary key auto_increment, name varchar(20), class_id int, foreign key(class_id) references class(id) );</p>
+<p>　　　　注意：作为外键一定要和关联主键的数据类型保持一致</p>
+<p>　　　　插入数据： insert into class (name,stu_nums) values (‘班级一’,10),(‘班级二’,12),(‘班级三’,13),(‘班级四’,14),(‘班级五’,15);</p>
+<p>　　　　　　　　   insert into student (name,class_id) values (‘Tom’,1),(‘Jim’,1),(‘Jake’,2),(‘Mike’,3),(‘Jane’,4);</p>
+<p>　　　　增加外键： alter table student add constraint student_fk_class foreign key(class_id) references class(id);</p>
+<p>　　　　删除外键： alter table student drop foreign key student_ibfk_1;</p>
+<p>　　2、INNODB支持的on语句</p>
+<p>　　　　外键约束对子表的含义：如果在父表中找不到候选键，则不允许在子表进行<code>insert</code>/<code>update</code></p>
+<p><code></code>外键约束对父表的含义：在父表上进行<code>update</code>/<code>delete</code>以更新或删除在子表中的一条或多条对应数据，</p>
+<p>　　　　父表的行为取决于：在定义子表的外键指定的<code>on update</code>/<code>on delete</code>语句</p>
+<p>　　　　ON DELETE CASCADE 级联删除：父表记录被删除，子表对应的记录自动被删除</p>
+<p>　　　　　　foreign key(class_id) references class(id) on delete cascade;</p>
+<p>　　　　ON DELETE SET NULL 置空：父表update/delete记录时，子表设为null</p>
+<p>　　　　　　foreign key(class_id) references class(id) on set null;</p>
+<p>　　　　RESTRICT：拒绝对父表进行删除操作</p>
+<p>　　　　NO ACTION：在mysql中同RESTRICT,如果子表中有匹配的记录,则不允许对父表对应候选键</p>
+<p>　　3、多表查询</p>
+<p>　　　　/* 创建2张表：员工表和部门表 并插入相关数据 */</p>
+<p>　　　　create table employee( emp_id int primary key auto_increment, emp_name varchar(20), age int, dept_id int );</p>
+<p>　　　　create table department( dept_id int primary key auto_increment, dept_name varchar(100) );</p>
+<p>　　　　insert into employee(emp_name,age,dept_id) values (‘A’,19,200), (‘B’,26,201), (‘C’,30,201), (‘D’,24,202), (‘E’,20,200), (‘F’,38,204);</p>
+<p>　　　　insert into department values (200,’人事部’), (201,’技术部’), (202,’销售部’), (203,’财政部’);</p>
+<p>　　　　笛卡尔积查询：查询结果是m*n</p>
+<p>　　　　　　select * from employee,department;</p>
+<p>　　　　内连接：查询两张表中都有的关联数据</p>
+<p>　　　　　　select * from employee,department where employee.dept_id=department.dept_ id;</p>
+<p>　　　　外连接：</p>
+<p>　　　　　　左外连接：在内连接的基础上增加左边有右边没有的结果</p>
+<p>　　　　　　　　select * from employee left join department on employee.dept_id=departmen t.dept_id;</p>
+<p>　　　　　　右外连接：在内连接的基础上增加右边有左边没有的结果</p>
+<p>　　　　　　　　select * from employee right join department on employee.dept_id=departme nt.dept_id;</p>
+<p>　　4、多条件查询</p>
+<p>　　　　查询员工大于25岁的信息：</p>
+<p>　　　　　　select employee.emp_name,department.dept_name</p>
+<p>　　　　　　 -&gt; from employee,department</p>
+<p>　　　　　　 -&gt; where employee.dept_id=department.dept_id and age&gt;25;</p>
+<p>　　　　以内连接方式查询employee和department表，并以age字段升序显示：</p>
+<p>　　　　　　select employee.emp_id,employee.emp_name,employee.age,department.dept_name</p>
+<p>　　　　　　-&gt; from employee,department</p>
+<p>　　　　　　-&gt; where employee.dept_id=department.dept_id</p>
+<p>　　　　　　-&gt; order by age asc;</p>
+<p>　　　　子查询：查询employee表，dept_id在department表中的所有信息</p>
+<p>　　　　　　select * from employee where dept_id in (select dept_id from department);</p>
+<p>　　　　子查询：</p>
+<p>　　　　　　select * from employee  where dept_id in (select dept_id from department where age&gt;25);</p>
+<p>　　　　使用EXISTS关键字</p>
+<p>　　　　EXISTS关字键字表示存在。在使用EXISTS关键字时，内层查询语句不返回查询的记录。</p>
+<p>　　　　而是返回一个真假值。Ture或False</p>
+<p>　　　　当返回Ture时，外层查询语句将进行查询；当返回值为False时，外层查询语句不进行查询</p>
+<p>　　　　　　select * from employee where EXISTS (SELECT dept_name from department where dept_id=205);</p>
+<p>　　　　　　select * from employee where EXISTS (SELECT dept_name from department where dept_id=203); </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lxhandsomelx.github.io.git/2020/07/02/jsp2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxhandsomelx">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lxhandsomelx的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/02/jsp2/" itemprop="url">jsp学习2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-02T20:52:03+08:00">
+                2020-07-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/jsp/" itemprop="url" rel="index">
+                    <span itemprop="name">jsp</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  281
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="jsp九大隐式对象"><a href="#jsp九大隐式对象" class="headerlink" title="jsp九大隐式对象"></a>jsp九大隐式对象</h1>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2020/05/28/hello-world/#more" rel="contents">
+            <a class="btn" href="/2020/07/02/jsp2/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1052,6 +2431,10 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
 
 
           </div>
@@ -1095,14 +2478,32 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -1136,7 +2537,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <!-- <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <!-- <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -1150,7 +2551,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.3k</span>
+    <span title="Site words total count">71.6k</span>
   
 </div>
 
